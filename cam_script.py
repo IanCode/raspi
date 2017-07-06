@@ -2,11 +2,15 @@
 
 import subprocess
 import time
+from picamera import PiCamera
+
+camera = PiCamera()
 
 def main():
 	for i in range(10):
-		time.sleep(1)
-		print("\nprinting some stuff\n")
+		time.sleep(2)
+		camera.capture('/pix/raspi/image%s.jpg' % i)
+		print("\ntaking a picture\n")
 
 
 if __name__=="__main__":
