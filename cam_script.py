@@ -9,7 +9,7 @@ camera = PiCamera()
 def main():
 	for i in range(10):
 		time.sleep(2)
-		camera.capture('/pix/raspi/image%s.jpg' % i)
+		camera.capture('image%s.jpg' % i)
 		print("\ntaking a picture\n")
 
 
